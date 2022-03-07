@@ -1,6 +1,6 @@
 const Campground = require('../models/campground');
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
-const mapBoxToken = "pk.eyJ1IjoiaHdlazIxIiwiYSI6ImNsMGZ6aDR0cjB2cTIzY2s5a3l2Z3k5bTcifQ.mEFeoc4xR89F0BKWOdA5MA";
+const mapBoxToken = "pk.eyJ1IjoiaHdlazIxIiwiYSI6ImNsMGZ6aDR0cjB2cTIzY2s5a3l2Z3k5bTcifQ.mEFeoc4xR89F0BKWOdA";
 const geocoder = mbxGeocoding({ accessToken: mapBoxToken });
 const { cloudinary } = require("../cloudinary");
 
