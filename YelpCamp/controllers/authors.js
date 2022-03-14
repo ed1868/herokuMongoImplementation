@@ -21,13 +21,25 @@ module.exports.register = async (req, res, next) => {
         const email = "ruizeduardo21@Gmail.com";
         const username = "mayhem";
         const password = "foo";
-        const socials = "eth";
+        const social = "eth";
         const wallet = "564564ds54f56ds4f56ds4fsdfdsfds";
 
         // const { email, username, password ,socials, wallet} = req.body;
 
-        const author = new Author({ email, username, socials, wallet });
+        const author = new Author({ email, username, social, wallet });
+        console.log('jdhkjhdsjfhdskj', author);
+        Author.create(author).then(payload => {
+            console.log('the payload: ', payload);
+        })
+        .catch(err => {
+            if(err){
+                console.log('ERROR:::', err);
+            }
+        });
+
+
         const registeredAuthor = await Author.register(author);
+        console.log('the registered author :::', registeredAuthor);
         req.login(registeredAuthor, err => {
             if (err) return next(err);
             req.flash('success', 'Welcome To Nomad Market Place!');

@@ -10,18 +10,18 @@ const users = require('../../controllers/users');
 router.route('/')
     .get(authors.findAll)
 
-router.route('/author_ranks')
-    .get(authors.getRanks)
+// router.route('/author_ranks')
+//     .get(authors.getRanks)
 
-router.route('/count')
-    .get(authors.authorCounts)
+// router.route('/count')
+//     .get(authors.authorCounts)
 
 
-router.route('/:id')
-    .get(authors.findOne)
+// router.route('/:id')
+//     .get(authors.findOne)
 
-router.route('/:id/edit')
-    .put(authors.update)
+// router.route('/:id/edit')
+//     .put(authors.update)
     
 router.route('/register')
     .get(authors.renderRegister)
